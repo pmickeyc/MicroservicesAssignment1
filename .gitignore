@@ -1,0 +1,6 @@
+target/
+*.log
+.idea/
+.vscode/
+Assignment26#1.pdf/
+H2 config.png/

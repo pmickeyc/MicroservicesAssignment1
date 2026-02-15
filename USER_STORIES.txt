@@ -1,0 +1,65 @@
+USER STORIES
+
+Sales App User Stories (End-User Perspective)
+
+1. As a sales admin, I want to create a customer profile with contact and address details so I can keep customer records complete.
+
+2. As a sales admin, I want to update customer details so I can keep information accurate over time.
+
+3. As a sales admin, I want to view a single customer quickly so I can check their details before taking action.
+
+4. As a sales admin, I want to list customers with paging so I can browse large customer sets without long load times.
+
+5. As a sales admin, I want to create an order for a specific customer so I can record new sales activity.
+
+6. As a sales admin, I want to edit an order's date, status, or amount so I can correct or progress sales records.
+
+7. As a sales admin, I want to remove an order when created in error so the order history stays clean.
+
+8. As a sales admin, I want to see all orders for one customer so I can review that account's sales history.
+
+9. As a sales admin, I want to filter orders by date range so I can review sales for a period.
+
+10. As a sales admin, I want to filter orders by status so I can focus on pending, confirmed, shipped, delivered, or cancelled work.
+
+11. As a sales admin, I want to filter orders by amount range so I can focus on high-value or low-value orders.
+
+12. As a sales admin, I want sorted and paged order lists so I can move through records efficiently.
+
+13. As a sales admin, I want the system to prevent deleting customers that still have orders so I do not lose linked business history by mistake.
+
+14. As a sales admin, I want meaningful validation messages when I enter invalid data so I can fix issues quickly.
+
+15. As a sales admin, I want seeded sample data on startup so I can demo and test workflows immediately.
+
+API Stories (My Perspective as the Developer)
+
+16. As the API developer, I want a clear one-to-many model (Customer -> SalesOrder) so relationship rules are explicit in schema and code.
+
+17. As the API developer, I want a one-to-one CustomerProfile model so I can show richer JPA relationships beyond the baseline.
+
+18. As the API developer, I want DTO-based request/response contracts so internal entities are not exposed directly.
+
+19. As the API developer, I want consistent versioned routes under /api/sales/v1 so clients get a stable contract.
+
+20. As the API developer, I want ISO date handling and validation so date parsing and filtering are reliable.
+
+21. As the API developer, I want consistent pagination metadata in collection responses so frontend/API clients can paginate predictably.
+
+22. As the API developer, I want structured error payloads (timestamp, status, error, message, path, fieldErrors) so consumers can handle failures uniformly.
+
+23. As the API developer, I want correct HTTP semantics (201, 204, 400, 404, 409) so the API behaves according to REST expectations.
+
+24. As the API developer, I want dynamic filtering for orders (date, status, min/max amount) using JPA specifications so queries stay flexible without endpoint sprawl.
+
+25. As the API developer, I want optimistic locking on key entities so concurrent updates are safer.
+
+26. As the API developer, I want indexes on common query fields so paging and filtering stay performant.
+
+27. As the API developer, I want in-memory H2 with startup SQL initialization so the environment is reproducible for demos and grading.
+
+28. As the API developer, I want H2 console access so I can quickly inspect data and verify entity relationships during development.
+
+29. As the API developer, I want automated test runs validating startup and API behavior so I can catch regressions before submission.
+
+30. As the API developer, I want clear README documentation so the lecturer can run, inspect, and evaluate the API with minimal setup friction.
