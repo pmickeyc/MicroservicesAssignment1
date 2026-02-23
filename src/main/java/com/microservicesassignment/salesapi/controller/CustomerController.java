@@ -36,8 +36,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ResponseEntity<PagedResponse<CustomerResponse>> getCustomers(
-        @PageableDefault(size = 20, sort = "id") Pageable pageable) {
+    public ResponseEntity<PagedResponse<CustomerResponse>> getCustomers(@PageableDefault(size = 20, sort = "id") Pageable pageable) {
         Page<CustomerResponse> page = customerService.getCustomers(pageable);
         return ResponseEntity.ok(PagedResponse.fromPage(page));
     }
@@ -59,8 +58,7 @@ public class CustomerController {
     }
 
     @PutMapping("/{customerId}")
-    public ResponseEntity<CustomerResponse> updateCustomer(@PathVariable @Positive Long customerId,
-                                                           @Valid @RequestBody UpdateCustomerRequest request) {
+    public ResponseEntity<CustomerResponse> updateCustomer(@PathVariable @Positive Long customerId, @Valid @RequestBody UpdateCustomerRequest request) {
         return ResponseEntity.ok(customerService.updateCustomer(customerId, request));
     }
 
